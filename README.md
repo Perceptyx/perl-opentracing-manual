@@ -4,22 +4,6 @@
 
 # OpenTracing Manaual
 
-## Introduction
-
-From the OpenTracin IO website:
-
-> OpenTracing is comprised of an API specification, frameworks and libraries
-> that have implemented the specification, and documentation for the project.
-> OpenTracing allows developers to add instrumentation to their application code
-> using APIs that do not lock them into any one particular product or vendor.
-
-> Distributed tracing, also called distributed request tracing, is a method used
-> to profile and monitor applications, especially those built using a
-> microservices architecture. Distributed tracing helps pinpoint where failures
-> occur and what causes poor performance.
-
-See also: [OpenTracing Overview](https://opentracing.io/docs/overview/).
-
 ## Description
 
 This Manual is a quick overview of what is available in Perl related to the
@@ -32,6 +16,22 @@ It targets three different audiences:
 - Tracing service Implementation providers
 
 Included is a list of Perl Modules and those that are on the horizon.
+
+## Introduction
+
+From the OpenTracing IO website:
+
+> OpenTracing is comprised of an API specification, frameworks and libraries
+> that have implemented the specification, and documentation for the project.
+> OpenTracing allows developers to add instrumentation to their application code
+> using APIs that do not lock them into any one particular product or vendor.
+
+> Distributed tracing, also called distributed request tracing, is a method used
+> to profile and monitor applications, especially those built using a
+> microservices architecture. Distributed tracing helps pinpoint where failures
+> occur and what causes poor performance.
+
+See also: [OpenTracing Overview](https://opentracing.io/docs/overview/).
 
 ## LICENSE INFORMATION
 

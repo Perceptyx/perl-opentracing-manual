@@ -46,7 +46,7 @@ Included is a list of Perl Modules and those that are on the horizon.
 
 =head1 INTRODUCTION
 
-From the OpenTracin IO website:
+From the OpenTracing IO website:
 
 OpenTracing is comprised of an API specification, frameworks and libraries
 that have implemented the specification, and documentation for the project.
