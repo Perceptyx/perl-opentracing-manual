@@ -1,3 +1,5 @@
+cpanfile
+lib/OpenTracing/Manual.pm
 lib/OpenTracing/Manual.pod
 LICENSE.md
 Makefile.PL

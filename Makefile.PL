@@ -5,7 +5,7 @@ WriteMakefile(
     'AUTHOR'        => [
         'Theo van Hoesel (VANHOESEL) <tvanhoesel@perceptyx.com'
     ],
-    'VERSION'       => '0.01',
+    'VERSION'       => '0.02',
     'ABSTRACT_FROM' => 'lib/OpenTracing/Manual.pod',
     'LICENSE'       => 'artistic2',
     'MAN3PODS'      => {
