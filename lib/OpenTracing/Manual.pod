@@ -234,9 +234,10 @@ See L<OpenTracing::Implementation> for more on how to bootstrap.
 
 =head3 OpenTracing Carriers
 
-The OpenTracing specification requires a L<Tracer|OpenTracing::Interface::Tracer>
-implementation to understand how a L<SpanContext|OpenTracing::Interface::SpanContext>
-will be I<inject> into or I<extract> from a so called I<carrier> or I<request>.
+The OpenTracing specification requires a L<Tracer|
+OpenTracing::Interface::Tracer> implementation to understand how a L<SpanContext
+|OpenTracing::Interface::SpanContext> will be I<inject> into or I<extract> from
+a so called I<carrier> or I<request>.
 
 The I<carrier formats> required are I<text>, I<http>, and I<binary>, but there
 is no I<standard> on how thoses formats exactly look like and are implementation
@@ -261,11 +262,13 @@ same public interface. Most frameworks know how to handle those.
     );
 
 All Spans are part of a context. That is also true for the rootspan in a
-Framework. Spans are started as a C<child_of> a specific L<SpanContext|OpenTracing::Interface::SpanContext>.
+Framework. Spans are started as a C<child_of> a specific L<SpanContext|
+OpenTracing::Interface::SpanContext>.
 
 The SpanContext for a root-span is the incomming request that may or may not
 contain tracer information from its requestor. Use the L<< C<extract_context>
-from a I<Tracer> object|OpenTracing::Interface::Tracer/"extract_context(-OPENTRACING_CARRIER_FORMAT-=>-$carrier-)" >
+from a I<Tracer> object|OpenTracing::Interface::Tracer/
+"extract_context(-OPENTRACING_CARRIER_FORMAT-=>-$carrier-)" >>
 
 
 Since some implementations may use inmutable objects and may have required
@@ -339,10 +342,11 @@ with a expected C<bag> of L<Span|OpenTracing::Interface::Span>s.
     
     sub execute_request { ... }
 
-Crucial is that you use the L<Test Implementation|OpenTracing::Implementation::Test>.
+Crucial is that you use the L<Test Implementation|
+OpenTracing::Implementation::Test>.
 This will keep an in-memmory recording of all spans and have a additional
-L<< C<get_recorded_trace>|OpenTracing::Implementation::Test::Tracer> to get the
-collected spans, which can be used to compare with expected spans.
+L<< C<get_recorded_trace>|OpenTracing::Implementation::Test::Tracer >> to get
+the collected spans, which can be used to compare with expected spans.
 
 
 
