@@ -309,6 +309,41 @@ But remember, such mechanisms are entirely dependent on the implmentation.
     );
     my response = LWP::UserAgent->request( $request );
 
+=head3 Testing your Framework Plugins
+
+To test that your Framework Plugin is doing the right thing, all you need to do
+is run it with the L<Test Implementation|OpenTracing::Implementation::Test>. And
+then compare the collected span information using
+L<< C<globaltracer_cmp_deeply>|Test::OpenTracing::Integration >>
+with a expected C<bag> of L<Span|OpenTracing::Interface::Span>s.
+
+    use Test::Most;
+    use Test::OpenTracing::Integration;
+    
+    my $test_application = Test::Application->new;
+    my $http_request = HTTP::Request->new( ... );
+    
+    lives_ok{ $test_application->execute_request( $http_request );
+    } "Can do request";
+    
+    globaltracer_cmp_deeply [ ... ],
+        "... and produced the expected spans";
+    
+    done_testing;
+    
+    package Test::Application;
+    
+    use YourFramework;
+    
+    use YourFramework::Plugin::OpenTracing qw/Test/
+    
+    sub execute_request { ... }
+
+Crucial is that you use the L<Test Implementation|OpenTracing::Implementation::Test>.
+This will keep an in-memmory recording of all spans and have a additional
+L<< C<get_recorded_trace>|OpenTracing::Implementation::Test::Tracer> to get the
+collected spans, which can be used to compare with expected spans.
+
 
 
 =head2 For Tracing service Implementation providers
