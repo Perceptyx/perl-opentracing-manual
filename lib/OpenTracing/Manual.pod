@@ -1,11 +1,15 @@
 
 =head1 NAME
 
+
+
 OpenTracing::Manual - A quick overview about Perl5 and OpenTracing
 
 
 
 =head1 WARNING
+
+
 
 The C<OpenTracing> module on CPAN is B<NOT COMPLIANT> with anything remotely to
 L<OpenTracing.IO|https://opentracing.io> or the L<OpenTracing::Interface>.
@@ -15,6 +19,8 @@ B<DO NOT USE THE OPENTRACING PACKAGE>
 
 
 =head1 DESCRIPTION
+
+
 
 This Manual is a quick overview of what is available in Perl related to the
 OpenTracing API related Interface Definition.
@@ -73,6 +79,8 @@ L<OpenTracing::Interface/SYNOPSIS>
 
 =head1 THE OPENTRACING ECOSYSTEM FOR PERL
 
+
+
 Included is a list of Perl Modules and those that are on the horizon, see the
 L<OpenTracing::Manual::Ecosystem>.
 
@@ -116,24 +124,21 @@ done on the following, unless ...
 
 
 
-
-
-
-
-
-
-
 =head1 SEE ALSO
-
-
 
 
 
 =head1 AUTHOR
 
+
+
 Theo van Hoesel <tvanhoesel@perceptyx.com>
 
+
+
 =head1 COPYRIGHT AND LICENSE
+
+
 
 'OpenTracing API for Perl' is Copyright (C) 2019 .. 2020, Perceptyx Inc
 
@@ -144,10 +149,3 @@ This library is distributed in the hope that it will be useful, but it is
 provided "as is" and without any express or implied warranties.
 
 For details, see the full text of the license in the file LICENSE.
-
-
-
-
-
-
-

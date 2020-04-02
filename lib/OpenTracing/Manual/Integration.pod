@@ -1,15 +1,24 @@
 
-
 =head1 NAME
+
+
 
 OpenTracing::Manual::Integration - For Framework or Integration Developers
 
+
+
 =head1 DESCRIPTION
+
+
 
 This part of the L<OpenTracing::Manual> will describe how distributed traces are
 progressed from one service to the other, using the concept of carriers.
 
+
+
 =head1 TABLE Of CONTENTS
+
+
 
 =over
 
@@ -24,7 +33,6 @@ progressed from one service to the other, using the concept of carriers.
 =item L</"Testing your Framework Plugins">
 
 =back
-
 
 
 
@@ -101,6 +109,8 @@ Or a more verbose way:
 
 See L<OpenTracing::Implementation> for more on how to bootstrap.
 
+
+
 =head2 OpenTracing Carriers
 
 The OpenTracing specification requires a L<Tracer|
@@ -163,6 +173,8 @@ object.
 
 But remember, such mechanisms are entirely dependent on the implmentation.
 
+
+
 =head2 Inject Context into an Outgoing Request
 
     my $span_context = $TRACER->get_active_span->get_context;
@@ -180,6 +192,8 @@ But remember, such mechanisms are entirely dependent on the implmentation.
         GET => 'https://...', $cntx_headers
     );
     my response = LWP::UserAgent->request( $request );
+
+
 
 =head2 Testing your Framework Plugins
 

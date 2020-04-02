@@ -1,13 +1,21 @@
 
 =head1 NAME
 
+
+
 OpenTracing::Manual::Instrumentation - For Application developers and Devops
 
+
+
 =head1 DESCRIPTION
+
+
 
 This part of the L<OpenTracing::Manual> is about how to setup OpenTracing inside
 an exisiting (web) application and add more detailed instrumentation to specific
 parts of the code.
+
+
 
 =head1 TABLE Of CONTENTS
 
@@ -55,6 +63,8 @@ a render-span, and a teardown-span.
 
 Incase you want more detailed information, see the next.
 
+
+
 =head2 Getting Access to the bootstrapped Tracer
 
 To get access to the Tracer, there are two ways to do so:
@@ -78,6 +88,8 @@ badly bootstrapped tracer, and 'production' can continue running.
 In the examples below, C<$TRACER> will be used, but you should have used the
 class method to get one.
 
+
+
 =head2 Use of Baggage Items for Request Parameters
 
 During some setup-stage, add Baggage Items, using L<< set_baggage_item|
@@ -91,6 +103,8 @@ OpenTracing::Interface::Span/set_baggage_item(-$key-=>-$value-) >>
 
 Those Baggage Items will be progressed into all descendent spans and delivered
 to the Tracing Provider.
+
+
 
 =head2 Manually adding Spans
 
