@@ -48,8 +48,9 @@ See L<OpenTracing::Manual::Implementation>.
 
 
 
+=head1 INTRODUCTION TO DISTRIBUTED AND OPENTRACING
 
-=head1 INTRODUCTION
+
 
 From the OpenTracing IO website:
 
@@ -64,6 +65,9 @@ microservices architecture. Distributed tracing helps pinpoint where failures
 occur and what causes poor performance.
 
 See also: L<OpenTracing Overview|https://opentracing.io/docs/overview/>.
+
+For a very condensed overview of how to use OpenTracing see:
+L<OpenTracing::Interface/SYNOPSIS>
 
 
 
@@ -111,7 +115,6 @@ done on the following, unless ...
 =back
 
 
-=head1 THE MANUAL
 
 
 
