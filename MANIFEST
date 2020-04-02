@@ -1,6 +1,7 @@
 cpanfile
 lib/OpenTracing/Manual.pm
 lib/OpenTracing/Manual.pod
+lib/OpenTracing/Manual/Implementation.pod
 lib/OpenTracing/Manual/Instrumentation.pod
 lib/OpenTracing/Manual/Integration.pod
 LICENSE.md

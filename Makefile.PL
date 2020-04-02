@@ -11,6 +11,8 @@ WriteMakefile(
     'MAN3PODS'      => {
         'lib/OpenTracing/Manual.pod'
             => 'blib/man3/OpenTracing::Manual.3',
+        'lib/OpenTracing/Manual/Implementation.pod'
+            => 'blib/man3/OpenTracing::Manual::Implementation.3',
         'lib/OpenTracing/Manual/Instrumentation.pod'
             => 'blib/man3/OpenTracing::Manual::Instrumentation.3',
         'lib/OpenTracing/Manual/Integration.pod'
