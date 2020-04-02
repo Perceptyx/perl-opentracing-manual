@@ -2,6 +2,7 @@ cpanfile
 lib/OpenTracing/Manual.pm
 lib/OpenTracing/Manual.pod
 lib/OpenTracing/Manual/Instrumentation.pod
+lib/OpenTracing/Manual/Integration.pod
 LICENSE.md
 Makefile.PL
 MANIFEST
