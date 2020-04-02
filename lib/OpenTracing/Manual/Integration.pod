@@ -231,3 +231,40 @@ This will keep an in-memmory recording of all spans and have a additional
 L<< C<get_recorded_trace>|OpenTracing::Implementation::Test::Tracer >> to get
 the collected spans, which can be used to compare with expected spans.
 
+
+
+=head1 SEE ALSO
+
+
+
+=over
+
+=item L<OpenTracing::Interface>
+
+A role that defines the Tracer interface.
+
+=item L<OpenTracing::Manual>
+
+A quick overview about Perl5 and OpenTracing
+
+=item L<OpenTracing::Manual::Instrumentation>
+
+For Application developers and Devops.
+
+=item L<OpenTracing::Manual::Implementation>
+
+For Tracing Service Implementations
+
+=item L<OpenTracing::Manual::Ecosystem>
+
+An overview of the OpenTracing puzzle pieces.
+
+=item L<OpenTracing Overview|https://opentracing.io/docs/overview/>
+
+The OpenTracing API standard.
+
+=back
+
+
+
+

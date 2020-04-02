@@ -128,6 +128,36 @@ done on the following, unless ...
 
 
 
+=over
+
+=item L<OpenTracing::Interface>
+
+A role that defines the Tracer interface.
+
+=item L<OpenTracing::Manual::Instrumentation>
+
+For Application developers and Devops.
+
+=item L<OpenTracing::Manual::Integration>
+
+For Framework or Integration Developers
+
+=item L<OpenTracing::Manual::Implementation>
+
+For Tracing Service Implementations
+
+=item L<OpenTracing::Manual::Ecosystem>
+
+An overview of the OpenTracing puzzle pieces.
+
+=item L<OpenTracing Overview|https://opentracing.io/docs/overview/>
+
+The OpenTracing API standard.
+
+=back
+
+
+
 =head1 AUTHOR
 
 

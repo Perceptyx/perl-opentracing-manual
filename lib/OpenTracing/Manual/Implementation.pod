@@ -289,3 +289,39 @@ C<extract_context> correctly, is entirely up to you. Also, it is up to you to
 check that the correct span information is being send to the tracer backend at
 C<finish>.
 
+
+
+=head1 SEE ALSO
+
+
+
+=over
+
+=item L<OpenTracing::Interface>
+
+A role that defines the Tracer interface.
+
+=item L<OpenTracing::Manual>
+
+A quick overview about Perl5 and OpenTracing
+
+=item L<OpenTracing::Manual::Instrumentation>
+
+For Application developers and Devops.
+
+=item L<OpenTracing::Manual::Integration>
+
+For Framework or Integration Developers
+
+=item L<OpenTracing::Manual::Ecosystem>
+
+An overview of the OpenTracing puzzle pieces.
+
+=item L<OpenTracing Overview|https://opentracing.io/docs/overview/>
+
+The OpenTracing API standard.
+
+=back
+
+
+

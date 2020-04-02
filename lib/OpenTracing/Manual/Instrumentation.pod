@@ -144,3 +144,39 @@ See L<< C<start_active_span>|OpenTracing::Interface::Tracer/
 "start_active_span(-$operation_name,-%options-)" >> for all the options you can
 pass in.
 
+
+
+=head1 SEE ALSO
+
+
+
+=over
+
+=item L<OpenTracing::Interface>
+
+A role that defines the Tracer interface.
+
+=item L<OpenTracing::Manual>
+
+A quick overview about Perl5 and OpenTracing
+
+=item L<OpenTracing::Manual::Integration>
+
+For Framework or Integration Developers
+
+=item L<OpenTracing::Manual::Implementation>
+
+For Tracing Service Implementations
+
+=item L<OpenTracing::Manual::Ecosystem>
+
+An overview of the OpenTracing puzzle pieces.
+
+=item L<OpenTracing Overview|https://opentracing.io/docs/overview/>
+
+The OpenTracing API standard.
+
+=back
+
+
+
