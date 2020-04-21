@@ -12,12 +12,12 @@ OpenTracing::Manual::Instrumentation - For Application developers and Devops
 
 
 This part of the L<OpenTracing::Manual> is about how to setup OpenTracing inside
-an exisiting (web) application and add more detailed instrumentation to specific
+an existing (web) application and add more detailed instrumentation to specific
 parts of the code.
 
 
 
-=head1 TABLE Of CONTENTS
+=head1 TABLE OF CONTENTS
 
 =over
 
@@ -39,13 +39,21 @@ parts of the code.
 
 =head2 Adding OpenTracing to your Application
 
-From the point of view for application developers that want to add
+From the point of view of application developers that want to add
 instrumentation, most likely it is just a matter of adding the right plugin to
-your framework or useragent.
+your framework or useragent.  The exact plugin implementation will vary,
+but will most likely look something like:
 
     use YourFramework::Plugin::OpenTracing;
     #
     # use OPENTRACING_IMPLEMENTATION environment variable to select which.
+
+The service that receives your OpenTracing data can be specified by setting
+C<OPENTRACING_IMPLEMENTATION> or by naming it in the use statement as such:
+
+    use MyFramework::Plugin::OpenTracing ( 'SomeImplementation',
+        option => 'foo'
+    );
 
 This will bootstrap a Tracer Implementation, use
 L<< C<extract_context>|OpenTracing::Interface::Tracer/
@@ -61,7 +69,7 @@ the plugin. That is, probably just one single rootspan. Some framework plugins
 might add another layer on top of that rootspan, like a setup-span, a run-span,
 a render-span, and a teardown-span.
 
-Incase you want more detailed information, see the next.
+In case you want more detailed information, see the next section.
 
 
 
@@ -95,7 +103,7 @@ class method to get one.
 During some setup-stage, add Baggage Items, using L<< set_baggage_item|
 OpenTracing::Interface::Span/set_baggage_item(-$key-=>-$value-) >>
 
-    my $customer_id = YourFramwork->request->query_param('customer_id);
+    my $customer_id = YourFramework->request->query_param('customer_id);
         
     $TRACER
         ->get_active_span
@@ -139,6 +147,9 @@ This being Perl, we can do better using L<OpenTracing::AutoScope>:
         
         return
     }
+
+Now we don't have to explicitly track your scope -- the span will end
+automatically at the end of the current function.
 
 See L<< C<start_active_span>|OpenTracing::Interface::Tracer/
 "start_active_span(-$operation_name,-%options-)" >> for all the options you can
