@@ -13,7 +13,8 @@ OpenTracing::Manual::Instrumentation - For Application developers and Devops
 
 This part of the L<OpenTracing::Manual> is about how to setup OpenTracing inside
 an existing (web) application and add more detailed instrumentation to specific
-parts of the code.
+parts of the code. A high-level introduction can be found at
+L<https://opentracing.io/docs/best-practices/instrumenting-your-application/>.
 
 
 

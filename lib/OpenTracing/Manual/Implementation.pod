@@ -61,7 +61,7 @@ useful tools to help building your own.
 =head2 Bootstrapping a Tracer Implementation
 
 Because of directory structure, Perl best practices and more, an implementation
-consists a several files, grouped under a single namespace. However, the API has
+consists of several files, grouped under a single namespace. However, the API has
 no higher level definition of what an implementation is, it only speaks of the
 L<Tracer|OpenTracing::Interface::Tracer> being the I<entry point> of the API. It
 only looks more natural to be able to do things like:
@@ -102,7 +102,7 @@ files to quickly build your own classes.
     
     1;
 
-Look at L<OpenTracing::Roles> what each of those roles provide.
+Look at L<OpenTracing::Roles> to see what each of those roles provides.
 
 
 
@@ -121,7 +121,8 @@ for example the implementing Tracer's definition of spanID and traceID
 =item Any Baggage Items
 
 These are key:value pairs that cross process-boundaries.
-These may be useful to have some data available for access throughout the trace.
+These may be useful to have some data available for access throughout the trace
+(https://opentracing.io/docs/overview/tags-logs-baggage/#baggage-items).
 
 =back
 
@@ -154,7 +155,7 @@ the service provider.
 =head2 Sending Span Information to a Service Provider Backend
 
 How information is being send back to a service provider backend is beyond the
-scope of this manual. There are different scenario's to do so. Some may want to
+scope of this manual. There are different scenarios to do so. Some may want to
 collect a larger number of spans and send those straight to the backend. Others
 may have a locally installed agent that will gather spans coming from multiple
 threads and send them as a batch to the backend.
@@ -189,7 +190,9 @@ At the boundary or edges of an application, Frameworks use the two methods
 L<< C<inject_context>|OpenTracing::Interface::Tracer/
 "inject_context(-OPENTRACING_CARRIER_FORMAT-=>-$carrier,-$span_context-)" >> and
 L<< C<extract_context>|OpenTracing::Interface::Tracer/
-"extract_context(-OPENTRACING_CARRIER_FORMAT-=>-$carrier-)" >>.
+"extract_context(-OPENTRACING_CARRIER_FORMAT-=>-$carrier-)" >>
+(L<https://opentracing.io/docs/overview/tracers/#propagating-a-trace-with-inject-extract>).
+
 
 It is required that these methods are provided in the implementation. There are
 at least three OpenTracing required formats that need to be support. Only the
@@ -235,7 +238,7 @@ the trace information in a known format.
 
 =head2 OpenTracing Roles and Types
 
-The entire L<API|OpenTracing::Interface>is described in POD, it also provides a
+The entire L<API|OpenTracing::Interface> is described in POD, it also provides a
 set of Roles. These roles can optionally be consumed to do all the type-checking
 for parameters, options, and returned results.
 

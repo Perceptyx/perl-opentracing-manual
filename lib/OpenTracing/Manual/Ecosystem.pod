@@ -119,7 +119,8 @@ Bootstrap an implementation and set a global tracer.
 
 =item L<OpenTracing::Implementation::NoOp>
 
-Prevent applications from crashing.
+Prevent applications from crashing
+(see "NoopTracer" in L<https://opentracing.io/specification/>).
 
 =item L<OpenTracing::Implementation::Test>
 

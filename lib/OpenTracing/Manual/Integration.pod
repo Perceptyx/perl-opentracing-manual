@@ -22,7 +22,7 @@ progressed from one service to the other, using the concept of carriers.
 
 =over
 
-=item L</"Bootstrap a Implementation">
+=item L</"Bootstrap an Implementation">
 
 =item L</"OpenTracing Carriers">
 
@@ -116,7 +116,7 @@ See L<OpenTracing::Implementation> for more on how to bootstrap.
 The OpenTracing specification requires a L<Tracer|
 OpenTracing::Interface::Tracer> implementation to understand how a L<SpanContext
 |OpenTracing::Interface::SpanContext> will be I<inject>ed into or I<extract>ed from
-a so-called I<carrier> or I<request>.
+a so-called I<carrier> or I<request> (L<https://opentracing.io/docs/overview/inject-extract/>).
 
 The I<carrier formats> required are I<text>, I<http>, and I<binary>, but there
 is no strict I<standard> on how those formats look exactly look. The formats are
