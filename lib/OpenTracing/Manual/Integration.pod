@@ -240,6 +240,18 @@ the collected spans, which can be used to compare with expected spans.
 
 
 
+=head3 Tracing database calls
+
+If you use DBI for database handling, you can
+
+  use DBIx::OpenTracing;
+
+to automatically trace all database queries.
+
+See L<DBIx::OpenTracing> for details.
+
+
+
 =head1 SEE ALSO
 
 
