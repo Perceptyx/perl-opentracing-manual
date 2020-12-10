@@ -24,7 +24,7 @@ detailed information about all the puzzle pieces.
 
 =item L</"The OpenTracing API Specification">
 
-=item L</"Frameworks and Integrating OpenTracing">
+=item L</"Integrations and Frameworks">
 
 =item L</"Instrumenting a Application">
 
@@ -60,13 +60,14 @@ To make type-checking more easy.
 
 =item L<OpenTracing::Implementation::NoOp>
 
-Prevent applications from crashing.
+Allow OpenTracing to be disabled without breaking instrumentation code
+and have a safe fallback when no tracer can be initialised.
 
 =back
 
 
 
-=head2 Frameworks and Integrating OpenTracing
+=head2 Integrations and Frameworks
 
 Distributed Tracing is all about connecting services and microservices together,
 the following modules will handle the edges of the application and services and
@@ -83,6 +84,14 @@ run-span and more.
 
 Take care of all the specifics for DataDog.
 Comes bundled with L<CGI::Application::Plugin::OpenTracing>.
+
+=item L<DBIx::OpenTracing>
+
+Auto generate spans around database calls.
+
+=item L<Log::Log4perl::OpenTracing>
+
+Add OpenTracing context information to logs.
 
 =back
 
@@ -102,6 +111,10 @@ Get access to a bootstrapped implementation.
 =item L<OpenTracing::AutoScope>
 
 Finish a span after exiting a scope.
+
+=item L<OpenTracing::WrapScope>
+
+Create spans around subroutines.
 
 =back
 
@@ -124,7 +137,9 @@ Prevent applications from crashing
 
 =item L<OpenTracing::Implementation::Test>
 
-Build a data structure that can be used to do a C<cmp_deeply> variant.
+Keep spans as an in-memory data structure and expose
+L<Test::Builder>-compatible comparison functions in order
+to allow easy testing of new instrumentation code or frameworks.
 
 =item L<OpenTracing::Implementation::DataDog>
 
@@ -172,15 +187,6 @@ The following modules will be needed for easier instrumentation of an
 application or better framework integration and distributed tracing.
 
 =over
-
-=item L<OpenTracing::WrapScope>
-
-Wrap full-qualified named subroutines in a scope, instead of modifying all the
-codebase.
-
-=item L<DBIx::OpenTracing>
-
-Trace all C<DBI> requests, using L<DBIx::QueryLog>.
 
 =item L<LWP::UserAgent::Plugin::OpenTracing>
 

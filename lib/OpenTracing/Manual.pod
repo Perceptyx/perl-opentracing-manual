@@ -90,7 +90,7 @@ For more, see the L<OpenTracing::Manual::Ecosystem>.
 
 The specification itself, and related modules.
 
-=item L<OpenTracing::Manual::Ecosystem/"Frameworks and Integrating OpenTracing">.
+=item L<OpenTracing::Manual::Ecosystem/"Integrations and Frameworks">.
 
 Distributed tracing is all about connecting services and microservices together.
 These modules will handle the edges of the application and services and
