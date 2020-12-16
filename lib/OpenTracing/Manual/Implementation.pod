@@ -272,8 +272,26 @@ The possible solution might be implemented like:
     }
     
     sub extract_context_from_array_reference { ... }
-    sub extract_context_from_hash_reference  { ... }
-    sub extract_context_from_http_headers    { ... }
+    
+    sub extract_context_from_hash_reference ($self, $carrier) {
+        $self->maybe_build_context_with( $carrier->{ opentracing_context } )
+    }
+    
+    sub extract_context_from_http_headers ($self, $carrier) {
+        $self->maybe_build_context_with(
+            trace_id => $carrier->header('X_YOUR_IMPLEMENTATION_TRACE_ID'),
+            span_id  => $carrier->header('X_YOUR_IMPLEMENTATION_SPAN_ID' ),
+    }
+    
+    sub maybe_build_context_with ($self, %context_args) {
+        return unless ( $context_args{trace_id} && $context_args{span_id};
+        return $self->build_context_with(%context_args)
+    }
+    # This may return undef iff the carrier can be understood, and no relevant
+    # information could be detected. This usually happens at incomming request
+    # that are not part of a ditributed service.
+    
+    sub build_context_with ($self, %context_args) { ... }
 
 Where the C<X_YOUR_IMPLEMENTATION_TRACE_ID> is fully provider dependent. The
 other (micro) service you want to talk may be implemented using a complete
