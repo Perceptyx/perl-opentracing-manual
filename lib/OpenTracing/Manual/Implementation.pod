@@ -217,7 +217,7 @@ C<HashRef>
 
 C<InstanceOf['HTTP::Headers']>
 
-notably, these inheritly include L<HTTP::Headers>, L<HTTP::Headers::Fast>, and
+notably, these inherently include L<HTTP::Headers>, L<HTTP::Headers::Fast>, and
 L<HTTP::Headers::Fast::XS>.
 
 =back
