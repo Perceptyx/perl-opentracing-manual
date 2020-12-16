@@ -200,10 +200,12 @@ passing the request on to the microservice.
 
 =head3 NOTE
 
-The OpenTracing specifications mentions a I<CARRIER FORMAT> and this was
-initially used too. But the roles provided will autimagically detect the right
-reference and a specific C<extract_from_*> or C<inject_into_*> method will
-handle the exraction/injection at implementation level.
+The OpenTracing specifications mention a I<CARRIER_FORMAT>, which was used in an
+earlier version. But since the carrier type can be detected by perl, this has
+been removed form the Perl interface for the C<inject_context> and
+C<extract_context> definitions. (See also
+L<OpenTracing::Manual::Implementation/"Propagating Tracer Information between Services">
+for an example)
 
 
 
